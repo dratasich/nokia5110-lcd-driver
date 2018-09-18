@@ -1,6 +1,7 @@
 /* Necessary includes for drivers */
 #include <linux/init.h>
 #include <linux/module.h>
+#include <linux/fs.h>
 #include <linux/kthread.h>
 #include <linux/delay.h>
 #include <linux/gpio.h>
@@ -144,13 +145,11 @@ static const unsigned short ASCII[][5] =
 #define PAGE_SIZE (4*1024)
 #define BLOCK_SIZE (4*1024)
 
-#define RES   17 // 0
-#define SCE   18 // 1
-#define DC    27 // 2
-#define SDIN  22 // 3
-#define SCLK  23 // 4
-#define TMP0  24 // 5
-#define TMP1  25 // 6
+#define RES   27
+#define SCE   22
+#define DC    23
+#define SDIN  24
+#define SCLK  25
 
 #define LCD_WIDTH 84
 #define LCD_HEIGHT 48
